@@ -12,18 +12,22 @@ public class Estacionamento {
 		
 		public static void estadoEstacionamento(Carro[] estacionamento) {
 					
+					String texto = "";
 					for (int i = 0; i < Estacio.length; i++) {
 		
 						if (Estacio[i] != null) {
 		
-							System.out.println("\nVaga " + i + "\nModelo do Carro " + Estacio[i].modelo + "\nPlaca " + Estacio[i].placa + "\n");
+							texto += "\nVaga " + i + "\nModelo do Carro -> " + Estacio[i].modelo + "\nPlaca -> "
+							+ Estacio[i].placa + "\n\n";
 						}
 		
 						else if(Estacio[i] == null) {
-							System.out.println("Vaga " + i + " -> Disponível");
+							texto += "Vaga " + i + " -> Disponível\n\n";
 						}
 		
 					}
+					JOptionPane.showMessageDialog
+					(null, texto);
 				}
 
 		
